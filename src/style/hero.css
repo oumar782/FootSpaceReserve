@@ -1,0 +1,249 @@
+/* Styles généraux */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.1), #ffffff;
+    padding-top: 4rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 1fr 400px;
+    }
+  }
+  
+  /* Contenu principal */
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .text-content h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .text-content .primary {
+    color: #007bff;
+  }
+  
+  .text-content p {
+    max-width: 600px;
+    color: #6c757d;
+    font-size: 1.125rem;
+  }
+  
+  /* Boutons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .demo-button,
+  .features-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .demo-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .demo-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .features-button {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+  }
+  
+  .features-button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .arrow-icon {
+    margin-left: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .demo-button:hover .arrow-icon {
+    transform: translateX(0.25rem);
+  }
+  
+  /* Calendrier */
+  .calendar-container {
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: linear-gradient(to bottom right, #f0f4ff, #e0e7ff);
+  }
+  
+  .calendar-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .calendar-card {
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s;
+  }
+  
+  .calendar-card.hovered {
+    transform: scale(1.05);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1a202c;
+  }
+  
+  .calendar-icon {
+    color: #007bff;
+  }
+  
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .day-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .primary-bg {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .orange-bg {
+    background-color: #ff6b35;
+    color: white;
+  }
+  
+  .muted-bg {
+    background-color: #f3f4f6;
+    color: #6c757d;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .time-slot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+  }
+  
+  .time-slot.muted-bg {
+    background-color: #f3f4f6;
+  }
+  
+  .time-slot.primary-bg {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .clock-icon,
+  .users-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .clock-icon.primary,
+  .users-icon.primary {
+    color: #007bff;
+  }
+  
+  .reserve-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .reserve-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: linear-gradient(to top, #ffffff, transparent);
+  }
